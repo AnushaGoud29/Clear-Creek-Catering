@@ -1,0 +1,109 @@
+element.style{
+    font-family: Sacramento;
+    font-weight: normal;
+    text-transform: none;
+}
+.page-header .pm-page-heading {
+    letter-spacing: 2px;
+}
+.page-header .pm-page-heading, .page-header .pm-page-subheading {
+    text-shadow: 1px 1px 5px rgb(0 0 0 / 40%);
+}
+.page-header .pm-page-heading, .page-header .pm-page-subheading {
+    text-shadow: 1px 0 3px rgb(0 0 0 / 20%);
+}
+.pm-font-header.pm-font-large {
+    font-size: 68px;
+}
+.page-header .pm-page-heading {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 10% 30px;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 48px;
+    text-shadow: 1px 1px #393939;
+}
+h1, .h1 {
+    font-size: 36px;
+}
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+html, body {
+    font-family: "Public Sans";
+}
+html, body {
+    background-color: #333;
+    font-family: futura-pt,proxima-nova,Arial,sans-serif;
+    min-height: 100%;
+    font-size: 16px;
+}
+body {
+    font-family: helvetica neue,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333;
+    background-color: #fff;
+}
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+::selection {
+    color: #fff;
+    background-color: #080808;
+}
