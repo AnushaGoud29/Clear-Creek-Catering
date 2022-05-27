@@ -25,6 +25,8 @@ nav {
 width:100%;
 color: white;
 overflow: auto;
+position: fixed;
+
 
 }
 ul{
@@ -37,9 +39,8 @@ li{
  margin-left: 30px;
  list-style: none;
  font-size: large;
- color:white;
- font-family:cursive;
-
+ 
+ font-family:'Times New Roman', Times, serif;
 }
 .margin-right{
   background-color: yellowgreen;
