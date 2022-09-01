@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cart</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/tooplate-crispy-kitchen.css" rel="stylesheet">
+    <link href="css/cart.css" rel="stylesheet">
+
+    <!--
+
+    Tooplate 2129 Crispy Kitchen
+
+    https://www.tooplate.com/view/2129-crispy-kitchen
+
+    -->
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand" href="index.html">
+                Clear Creek Catering
+            </a>
+
+            <div class="d-lg-none">
+                <button type="button" class="custom-btn btn btn-danger" data-bs-toggle="modal" data-bs-target="#BookingModal">John</button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="about.html">Menu</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="orderonline.html">Order Online</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="cart.html">Cart</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+
+                   
+                </ul>
+            </div>
+
+            <div class="d-none d-lg-block">
+                <button type="button" class="custom-btn btn btn-danger" data-bs-toggle="modal" data-bs-target="#BookingModal">John</button>
+            </div>
+
+        </div>
+    </nav>
+
+    <main>
+
+        <header class="site-header site-about-header">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-10 col-12 mx-auto">
+                        <h1 class="text-white">Cart</h1>
+
+                        <strong class="text-white">Listing your cravings</strong>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="overlay"></div>
+        </header>
+
+        <br />
+        <br />
+        <section class="cart-section-padding-2">
+            <div class="container">
+
+                <table id="customers_cart" class="customers_cart" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="product-thumbnail">&nbsp;</th>
+                            <th class="product-name">Product</th>
+                            <th class="product-price">Price</th>
+                            <th class="product-quantity">Quantity</th>
+                            <th class="product-subtotal">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="woocommerce-cart-form__cart-item cart_item">
+                            <td class="product-thumbnail"> <img width="75" height="75" src="https://scontent.fmci2-1.fna.fbcdn.net/v/t39.30808-6/274990744_471015514664857_3723214669142644841_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=aRh7axTAg8sAX_9ns2D&_nc_ht=scontent.fmci2-1.fna&oh=00_AT-Sw8K55nDOF7fOTPHP7CzW3bT47Br3Cvhn2L6rkNxb4A&oe=629BECF5" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail colorbox-853" alt="Famous Nachos" loading="lazy" srcset="https://scontent.fmci2-1.fna.fbcdn.net/v/t39.30808-6/274990744_471015514664857_3723214669142644841_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=aRh7axTAg8sAX_9ns2D&_nc_ht=scontent.fmci2-1.fna&oh=00_AT-Sw8K55nDOF7fOTPHP7CzW3bT47Br3Cvhn2L6rkNxb4A&oe=629BECF5 300w, https://scontent.fmci2-1.fna.fbcdn.net/v/t39.30808-6/274990744_471015514664857_3723214669142644841_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=aRh7axTAg8sAX_9ns2D&_nc_ht=scontent.fmci2-1.fna&oh=00_AT-Sw8K55nDOF7fOTPHP7CzW3bT47Br3Cvhn2L6rkNxb4A&oe=629BECF5 100w, https://scontent.fmci2-1.fna.fbcdn.net/v/t39.30808-6/274990744_471015514664857_3723214669142644841_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=aRh7axTAg8sAX_9ns2D&_nc_ht=scontent.fmci2-1.fna&oh=00_AT-Sw8K55nDOF7fOTPHP7CzW3bT47Br3Cvhn2L6rkNxb4A&oe=629BECF5 150w, https://scontent.fmci2-1.fna.fbcdn.net/v/t39.30808-6/274990744_471015514664857_3723214669142644841_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=aRh7axTAg8sAX_9ns2D&_nc_ht=scontent.fmci2-1.fna&oh=00_AT-Sw8K55nDOF7fOTPHP7CzW3bT47Br3Cvhn2L6rkNxb4A&oe=629BECF5 60w" sizes="(max-width: 300px) 100vw, 300px"> </td>
+                            <td class="product-name" data-title="Product"> <a>Smoked pork Sandwich&nbsp; </a></td>
+                            <td class="product-price" data-title="Price"> <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>8.45</bdi></span> </td>
+                            <td class="product-quantity" data-title="Quantity"> <div class="quantity"> <input type="number" id="quantity_6296a43bc7c61" class="input-text qty text" step="1" min="0" max="" name="cart[ee348d0627b55d18ca6c0b8ba4831d05][qty]" value="1" title="Qty" size="4" placeholder="" inputmode="numeric"> </div> </td>
+                            <td class="product-subtotal" data-title="Subtotal"> <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>8.45</bdi></span> </td>
+                        </tr>
+
+                        <tr class="woocommerce-cart-form__cart-item cart_item">
+                            <td class="product-thumbnail"> <img width="75" height="75" src="https://scontent.fmci2-1.fna.fbcdn.net/v/t39.30808-6/278195786_499536851812723_371324362884002612_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=P7ULo9HSPXYAX9axlIN&_nc_ht=scontent.fmci2-1.fna&oh=00_AT8rwB7oTIk8DVD22lwCaGW30guvb2-cNQUygY7uWbw-Kg&oe=629B24D2" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail colorbox-853" alt="Famous Nachos" loading="lazy" srcset="https://scontent.fmci2-1.fna.fbcdn.net/v/t39.30808-6/278195786_499536851812723_371324362884002612_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=P7ULo9HSPXYAX9axlIN&_nc_ht=scontent.fmci2-1.fna&oh=00_AT8rwB7oTIk8DVD22lwCaGW30guvb2-cNQUygY7uWbw-Kg&oe=629B24D2" 300w, https: //scontent.fmci2-1.fna.fbcdn.net/v/t39.30808-6/278195786_499536851812723_371324362884002612_n.jpg?_nc_cat =106&ccb =1-7&_nc_sid =8bfeb9&_nc_ohc =P7ULo9HSPXYAX9axlIN&_nc_ht =scontent.fmci2-1.fna&oh =00_AT8rwB7oTIk8DVD22lwCaGW30guvb2-cNQUygY7uWbw-Kg&oe =629B24D2 100w, https: //scontent.fmci2-1.fna.fbcdn.net/v/t39.30808-6/278195786_499536851812723_371324362884002612_n.jpg?_nc_cat =106&ccb =1-7&_nc_sid =8bfeb9&_nc_ohc =P7ULo9HSPXYAX9axlIN&_nc_ht =scontent.fmci2-1.fna&oh =00_AT8rwB7oTIk8DVD22lwCaGW30guvb2-cNQUygY7uWbw-Kg&oe =629B24D2 150w, https: //scontent.fmci2-1.fna.fbcdn.net/v/t39.30808-6/278195786_499536851812723_371324362884002612_n.jpg?_nc_cat =106&ccb =1-7&_nc_sid =8bfeb9&_nc_ohc =P7ULo9HSPXYAX9axlIN&_nc_ht =scontent.fmci2-1.fna&oh =00_AT8rwB7oTIk8DVD22lwCaGW30guvb2-cNQUygY7uWbw-Kg&oe =629B24D2 60w" sizes="(max-width: 300px) 100vw, 300px"> </td>
+                            <td class="product-name" data-title="Product"> <a>No bake Frozen Cheesecakes&nbsp; </a></td>
+                            <td class="product-price" data-title="Price"> <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>8.45</bdi></span> </td>
+                            <td class="product-quantity" data-title="Quantity"> <div class="quantity"><input type="number" id="quantity_6296a43bc7fb7" class="input-text qty text" step="1" min="0" max="" name="cart[221570aac8e50a5a26cae1cc7340a1d6][qty]" value="1" title="Qty" size="4" placeholder="" inputmode="numeric"> </div> </td>
+                            <td class="product-subtotal" data-title="Subtotal"> <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>8.45</bdi></span> </td>
+                        </tr>
+
+                        <tr class="blank_row">
+                            <td bgcolor="#FFFFFF" colspan="3">&nbsp;</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="4" class="actions"> <div class="coupon_1"> <label for="coupon_code">Coupon:</label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="Coupon code"> </div>  <input type="hidden" id="woocommerce-cart-nonce" name="woocommerce-cart-nonce" value="fd63a80847"><input type="hidden" name="_wp_http_referer" value="/cart/"> </td>
+                            <td colspan="2" class="actions"> <div class="coupon_2">  <button type="submit" class="button" id="apply_coupon" value="Apply coupon">Apply coupon</button> </div><input type="hidden" id="woocommerce-cart-nonce" name="woocommerce-cart-nonce" value="fd63a80847"><input type="hidden" name="_wp_http_referer" value="/cart/"> </td>
+                        </tr>
+
+                        <tr class="blank_row">
+                            <td bgcolor="#FFFFFF" colspan="3">&nbsp;</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="6" class="actions"> <div class="coupon_2"</div> <button type="submit" class="button" name="update_cart" value="Update cart" disabled="" aria-disabled="true">Update cart</button> <input type="hidden" id="woocommerce-cart-nonce" name="woocommerce-cart-nonce" value="fd63a80847"><input type="hidden" name="_wp_http_referer" value="/cart/"> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <br />
+
+        <p class="total">Total Price: $16.90</p>
+
+        <button class="button-54" role="button"> Proceed to Checkout</button>
+        <br />
+    </main>
+
+    <br />
+
+
+    <footer class="site-footer section-padding">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-12">
+                    <h4 class="text-white mb-4 me-5">Crispy Kitchen</h4>
+                </div>
+
+                <div class="col-lg-4 col-md-7 col-xs-12 tooplate-mt30">
+                    <h6 class="text-white mb-lg-4 mb-3">Location</h6>
+
+                    <p>1605 S Main St, Maryville, MO 64468, United States</p>
+
+                    <a href="https://goo.gl/maps/6LbZKqnVhavywYPW6" class="custom-btn btn btn-dark mt-2">Directions</a>
+                </div>
+
+                <div class="col-lg-4 col-md-5 col-xs-12 tooplate-mt30">
+                    <h6 class="text-white mb-lg-4 mb-3">Opening Hours</h6>
+
+                    <p class="mb-2">Monday - Friday</p>
+
+                    <p>10:00 AM - 02:00 AM</p>
+
+                    <p>Tel: <a href="tel: 010-02-0340" class="tel-link">010-02-0340</a></p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-xs-12 tooplate-mt30">
+                    <h6 class="text-white mb-lg-4 mb-3">Social</h6>
+
+                    <ul class="social-icon">
+                        <li><a href="#" class="social-icon-link bi-facebook"></a></li>
+
+                        <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+
+                        <li>
+                            <a href="https://twitter.com/search?q=tooplate.com&src=typed_query&f=live" target="_blank"
+                               class="social-icon-link bi-twitter"></a>
+                        </li>
+
+                        <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+                    </ul>
+
+
+
+                </div>
+
+            </div><!-- row ending -->
+
+        </div><!-- container ending -->
+
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="BookingModal" tabindex="-1" aria-labelledby="BookingModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="mb-0">Reserve a table</h3>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body d-flex flex-column justify-content-center">
+                    <div class="booking">
+
+                        <form class="booking-form row" role="form" action="#" method="post">
+                            <div class="col-lg-6 col-12">
+                                <label for="name" class="form-label">Full Name</label>
+
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <label for="email" class="form-label">Email Address</label>
+
+                                <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="your@email.com" required>
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <label for="phone" class="form-label">Phone Number</label>
+
+                                <input type="telephone" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" placeholder="123-456-7890">
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <label for="people" class="form-label">Number of persons</label>
+
+                                <input type="text" name="people" id="people" class="form-control" placeholder="12 persons">
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <label for="date" class="form-label">Date</label>
+
+                                <input type="date" name="date" id="date" value="" class="form-control">
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <label for="time" class="form-label">Time</label>
+
+                                <select class="form-select form-control" name="time" id="time">
+                                    <option value="5" selected>5:00 PM</option>
+                                    <option value="6">6:00 PM</option>
+                                    <option value="7">7:00 PM</option>
+                                    <option value="8">8:00 PM</option>
+                                    <option value="9">9:00 PM</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="message" class="form-label">Special Request</label>
+
+                                <textarea class="form-control" rows="4" id="message" name="message" placeholder=""></textarea>
+                            </div>
+
+                            <div class="col-lg-4 col-12 ms-auto">
+                                <button type="submit" class="form-control">Submit Request</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="modal-footer"></div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,732 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Clear Creek Catering</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
+    <!-- Custom Stylesheet -->
+    <link href="../../assets/plugins/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <div class="brand-logo">
+                <a href="index.html">
+                    <b class="logo-abbr">C</b>
+                    <span class="brand-title"><b>Clear Creek Catering</b></span>
+                </a>
+            </div>
+            <div class="nav-control">
+                <div class="hamburger">
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Header start
+        ***********************************-->
+        <div class="header">    
+            <div class="header-content clearfix">
+                <div class="header-left">
+                    <div class="input-group icons">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-transparent border-0" id="basic-addon1"><i class="icon-magnifier"></i></span>
+                        </div>
+                        <input type="search" class="border-0" placeholder="Search Dashboard" aria-label="Search Dashboard">
+                        <div class="drop-down animated flipInX d-md-none">
+                            <form action="#">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right">
+
+                    <ul class="clearfix">
+                        <li class="icons d-none d-md-flex">
+                            <a href="javascript:void(0)" class="window_fullscreen-x">
+                            </a>
+                        </li>
+                        <li class="icons">
+                            <a href="javascript:void(0)" class="">
+                                <span style='font-size:20px;'>&#9993;</span>
+                                 <span class="badge badge-danger">3</span>
+                            </a>
+                            <div class="drop-down animated flipInX">
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li class="notification-unread">
+                                            <a href="javascript:void()">
+                                                <img class="float-left mr-3 avatar-img" src="../../assets/images/avatar/1.jpg" alt="">
+                                                <div class="notification-content">
+                                                    <div class="notification-text">Hey, What's up! You have a good news !!!</div>
+                                                    <div class="notification-timestamp">08 Hours ago</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="notification-unread">
+                                            <a href="javascript:void()">
+                                                <img class="float-left mr-3 avatar-img" src="../../assets/images/avatar/2.jpg" alt="">
+                                                <div class="notification-content">
+                                                    <div class="notification-timestamp">08 Hours ago</div>
+                                                    <div class="notification-text">Can you do me a favour?</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <img class="float-left mr-3 avatar-img" src="../../assets/images/avatar/3.jpg" alt="">
+                                                <div class="notification-content">
+                                                    <div class="notification-text">Hey!</div>
+                                                    <div class="notification-timestamp">08 Hours ago</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <img class="float-left mr-3 avatar-img" src="../../assets/images/avatar/4.jpg" alt="">
+                                                <div class="notification-content">
+                                                    <div class="notification-text">And what do you do?</div>
+                                                    <div class="notification-timestamp">08 Hours ago</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <a class="d-flex justify-content-center bg-primary px-4 text-white" href="email-inbox.html">
+                                        <span>See all messagese </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="icons">
+                            <a href="javascript:void(0)" class="">
+                                <span style='font-size:20px;'>&#10069;</span>
+                                <span class="badge badge-primary">3</span>
+                            </a>
+                            <div class="drop-down animated flipInX dropdown-notfication">
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <span class="mr-3 avatar-icon bg-success-lighten-2"><i class="icon-calender"></i></span>
+                                                <div class="notification-content">
+                                                    <h6 class="notification-heading">Event Started</h6>
+                                                    <span class="notification-text">One hour ago</span> 
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <span class="mr-3 avatar-icon bg-danger-lighten-2"><i class="icon-calender"></i></span>
+                                                <div class="notification-content">
+                                                    <h6 class="notification-heading">Event Started</h6>
+                                                    <span class="notification-text">One hour ago</span> 
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <span class="mr-3 avatar-icon bg-success-lighten-2"><i class="icon-calender"></i></span>
+                                                <div class="notification-content">
+                                                    <h6 class="notification-heading">Event Started</h6>
+                                                    <span class="notification-text">One hour ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <span class="mr-3 avatar-icon bg-danger-lighten-2"><i class="icon-calender"></i></span>
+                                                <div class="notification-content">
+                                                    <h6 class="notification-heading">Event Started</h6>
+                                                    <span class="notification-text">One hour ago</span> 
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <a class="d-flex justify-content-between bg-primary px-4 text-white" href="javascript:void()">
+                                        <span>All Notifications</span>
+                                        <span><i class="icon-settings"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="icons">
+                            <div class="user-img c-pointer-x">
+                                <span class="activity active"></span>
+                                <img src="https://visualpharm.com/assets/381/Admin-595b40b65ba036ed117d3b23.svg" height="40" width="40" alt="">
+                            </div>
+                            <div class="drop-down dropdown-profile animated flipInX">
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li><a href="javascript:void()"><i class="icon-user"></i> <span>My Profile</span></a>
+                                        </li>
+                                        <li><a href="javascript:void()"><i class="icon-calender"></i> <span>My Calender</span></a>
+                                        </li>
+                                        <li><a href="javascript:void()"><i class="icon-envelope-open"></i> <span>My Inbox</span> <div class="badge gradient-3 badge-pill badge-primary">3</div></a>
+                                        </li>
+                                        <li><a href="javascript:void()"><i class="icon-paper-plane"></i> <span>My Tasks</span><div class="badge badge-pill bg-dark">3</div></a>
+                                        </li>
+                                        <li><a href="javascript:void()"><i class="icon-check"></i> <span>Online</span></a>
+                                        </li>
+                                        <li><a href="javascript:void()"><i class="icon-lock"></i> <span>Lock Screen</span></a>
+                                        </li>
+                                        <li><a href="javascript:void()"><i class="icon-key"></i> <span>Logout</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="nk-sidebar">           
+            <div class="nk-nav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li class="nav-label">Dashboard</li>
+                                       
+                    <ul aria-expanded="false">
+                        <li><a href="index.html">Admin Overview</a></li>
+                        <li><a href="restaurant-menus_1.html">Menus</a></li>
+                        <li><a >Offer</a></li>
+                        <li><a >Employees</a></li>
+                        
+                        <li><a href="restaurant-order_1.html">Order</a></li>
+                        <li><a href="restaurant-custommer_1.html">Custommer</a></li>
+                        
+                    </ul>
+                          
+                    </li>
+                    
+
+                </ul>
+            </div>
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+
+            <div class="row page-titles mx-0">
+                <div class="col-sm-6 p-md-0">
+                    <div class="breadcrumb-range-picker">
+                    </div>
+                </div>
+                <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                    <ol class="breadcrumb">
+                        <!-- <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                        <li class="breadcrumb-item active"><a href="javascript:void(0)">Components</a></li> -->
+                    </ol>
+                </div>
+            </div>
+            <!-- row -->
+
+            <div class="container-fluid">
+                <div class="row justify-content-between mb-3">
+					<div class="col-12 ">
+						<h2 class="page-heading">Hi,Welcome Back!</h2>
+						<p class="mb-0">Your restaurent admin </p>
+					</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-xl-2 col-xxl-4 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <img src="../../assets/images/users/1.jpg" class="rounded-circle" alt="">
+                                    <h5 class="mt-4">Bob Springer</h5>
+                                    <!-- <p>Location: <strong>Tokyo</strong></p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-2 col-xxl-4 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <img src="../../assets/images/users/2.jpg" class="rounded-circle" alt="">
+                                    <h5 class="mt-4">Angelica Ramos</h5>
+                                    <!-- <p>Location: <strong>New York</strong></p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-2 col-xxl-4 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <img src="../../assets/images/users/3.jpg" class="rounded-circle" alt="">
+                                    <h5 class="mt-4">Brielle Williamson</h5>
+                                    <!-- <p>Location: <strong>Tokyo</strong></p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-2 col-xxl-4 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <img src="../../assets/images/users/4.jpg" class="rounded-circle" alt="">
+                                    <h5 class="mt-4">Caesar Vance</h5>
+                                    <!-- <p>Location: <strong>San Francisco</strong></p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-2 col-xxl-4 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <img src="../../assets/images/users/5.jpg" class="rounded-circle" alt="">
+                                    <h5 class="mt-4">Cedric Kelly</h5>
+                                    <!-- <p>Location: <strong>Edinburgh</strong></p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-2 col-xxl-4 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <img src="../../assets/images/users/6.jpg" class="rounded-circle" alt="">
+                                    <h5 class="mt-4">Gavin Cortez</h5>
+                                    <!-- <p>Location: <strong>London</strong></p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header pb-0">
+                                <h4 class="card-title">Custommer</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table id="custommers" class="display" style="min-width: 845px">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>        
+                                                <th>Age</th>
+                                                <th>Start date</th>
+                                                <th>Number of Orders</th>
+                                                <th>Total Purchase</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Tiger Nixon</td>
+                                                <td>33</td>
+                                                <td>2011/04/25</td>
+                                                <td>6</td>
+                                                
+                                                <td>$70.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Garrett Winters</td>
+                                                <td>63</td>
+                                                <td>2011/07/25</td>
+                                                <td>3</td>
+
+                                                <td>$45.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ashton Cox</td>
+                                                <td>66</td>
+                                                <td>2009/01/12</td>
+                                                <td>2</td>
+
+                                                <td>$20.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cedric Kelly</td>
+                                                <td>22</td>
+                                                <td>2012/03/29</td>
+                                                <td>4</td>
+
+                                                <td>$33.33</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Airi Satou</td>
+                                                <td>33</td>
+                                                <td>2008/11/28</td>
+                                                <td>7</td>
+
+                                                <td>$95.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Brielle Williamson</td>
+                                                <td>61</td>
+                                                <td>2012/12/02</td>
+                                                <td>7</td>
+
+                                                <td>$92.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Herrod Chandler</td>
+                                                <td>59</td>
+                                                <td>2012/08/06</td>
+                                                <td>12</td>
+
+                                                <td>$137.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Rhona Davidson</td>
+                                                <td>55</td>
+                                                <td>2010/10/14</td>
+                                                <td>1</td>
+
+                                                <td>$11.22</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Colleen Hurst</td>
+                                                <td>39</td>
+                                                <td>2009/09/15</td>                              
+                                                                  <td>2</td>
+
+
+                                                <td>$20.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sonya Frost</td>
+                                                <td>23</td>
+                                                <td>2008/12/13</td>
+                                                <td>2</td>
+
+                                                <td>$10.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jena Gaines</td>
+                                                <td>30</td>
+                                                <td>2008/12/19</td>
+                                                <td>3</td>
+
+                                                <td>$36.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Quinn Flynn</td>
+                                                <td>22</td>
+                                                <td>2013/03/03</td>
+                                                <td>3</td>
+
+                                                <td>$34.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Charde Marshall</td>
+                                                <td>36</td>
+                                                <td>2008/10/16</td>
+                                                <td>6</td>
+
+                                                <td>$92.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Haley Kennedy</td>
+                                                <td>43</td>
+                                                <td>2012/12/18</td>
+                                                <td>2</td>
+
+                                                <td>$31.00</td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                        <tfoot>
+                                           
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        
+        
+        <!--**********************************
+            Footer start
+        ***********************************-->
+       <div class="footer">
+            <div class="copyright">
+r           </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+
+        
+        <!--**********************************
+            Right sidebar start
+        ***********************************-->
+        <div class="sidebar-right">
+            <a class="sidebar-right-trigger gradient-5-x" href="javascript:void(0)">
+                <span><i class="fa fa-cog fa-spin"></i></span>
+            </a>
+            <div class="sidebar-right-inner">
+                <div class="admin-settings">
+                    <h4>Pick your style</h4>
+                    <div>
+                        <p>Background</p>
+                        <select class="form-control" name="theme_version" id="theme_version">
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Layout</p>
+                        <select class="form-control" name="theme_layout" id="theme_layout">
+                            <option value="vertical">Vertical</option>
+                            <option value="horizontal">Horizontal</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Sidebar</p>
+                        <select class="form-control" name="sidebar_style" id="sidebar_style">
+                            <option value="full">Full</option>
+                            <option value="mini">Mini</option>
+                            <option value="compact">Compact</option>
+                            <option value="overlay">Overlay</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Sidebar position</p>
+                        <select class="form-control" name="sidebar_position" id="sidebar_position">
+                            <option value="static">Static</option>
+                            <option value="fixed">Fixed</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Header position</p>
+                        <select class="form-control" name="header_position" id="header_position">
+                            <option value="static">Static</option>
+                            <option value="fixed">Fixed</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Container</p>
+                        <select class="form-control" name="container_layout" id="container_layout">
+                            <option value="wide">Wide</option>
+                            <option value="boxed">Boxed</option>
+                            <option value="wide-boxed">Wide Boxed</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Direction</p>
+                        <select class="form-control" name="theme_direction" id="theme_direction">
+                            <option value="ltr">LTR</option>
+                            <option value="rtl">RTL</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Navigation Header</p>
+                        <div>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_1" class="filled-in chk-col-primary" id="nav_header_bg_1">
+                                <label for="nav_header_bg_1"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_2" class="filled-in chk-col-primary" id="nav_header_bg_2">
+                                <label for="nav_header_bg_2"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_3" class="filled-in chk-col-primary" id="nav_header_bg_3">
+                                <label for="nav_header_bg_3"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_4" class="filled-in chk-col-primary" id="nav_header_bg_4">
+                                <label for="nav_header_bg_4"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_5" class="filled-in chk-col-primary" id="nav_header_bg_5">
+                                <label for="nav_header_bg_5"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_6" class="filled-in chk-col-primary" id="nav_header_bg_6">
+                                <label for="nav_header_bg_6"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_7" class="filled-in chk-col-primary" id="nav_header_bg_7">
+                                <label for="nav_header_bg_7"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_8" class="filled-in chk-col-primary" id="nav_header_bg_8">
+                                <label for="nav_header_bg_8"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_9" class="filled-in chk-col-primary" id="nav_header_bg_9">
+                                <label for="nav_header_bg_9"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_10" class="filled-in chk-col-primary" id="nav_header_bg_10">
+                                <label for="nav_header_bg_10"></label>
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Header</p>
+                        <div>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_1" class="filled-in chk-col-primary" id="header_bg_1">
+                                <label for="header_bg_1"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_2" class="filled-in chk-col-primary" id="header_bg_2">
+                                <label for="header_bg_2"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_3" class="filled-in chk-col-primary" id="header_bg_3">
+                                <label for="header_bg_3"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_4" class="filled-in chk-col-primary" id="header_bg_4">
+                                <label for="header_bg_4"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_5" class="filled-in chk-col-primary" id="header_bg_5">
+                                <label for="header_bg_5"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_6" class="filled-in chk-col-primary" id="header_bg_6">
+                                <label for="header_bg_6"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_7" class="filled-in chk-col-primary" id="header_bg_7">
+                                <label for="header_bg_7"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_8" class="filled-in chk-col-primary" id="header_bg_8">
+                                <label for="header_bg_8"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_9" class="filled-in chk-col-primary" id="header_bg_9">
+                                <label for="header_bg_9"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_10" class="filled-in chk-col-primary" id="header_bg_10">
+                                <label for="header_bg_10"></label>
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Sidebar</p>
+                        <div>
+                            <span>
+                                <input type="radio" name="sidebar_bg" value="color_1" class="filled-in chk-col-primary" id="sidebar_bg_1">
+                                <label for="sidebar_bg_1"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="sidebar_bg" value="color_2" class="filled-in chk-col-primary" id="sidebar_bg_2">
+                                <label for="sidebar_bg_2"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="sidebar_bg" value="color_3" class="filled-in chk-col-primary" id="sidebar_bg_3">
+                                <label for="sidebar_bg_3"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="sidebar_bg" value="color_4" class="filled-in chk-col-primary" id="sidebar_bg_4">
+                                <label for="sidebar_bg_4"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="sidebar_bg" value="color_5" class="filled-in chk-col-primary" id="sidebar_bg_5">
+                                <label for="sidebar_bg_5"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="sidebar_bg" value="color_6" class="filled-in chk-col-primary" id="sidebar_bg_6">
+                                <label for="sidebar_bg_6"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="sidebar_bg" value="color_7" class="filled-in chk-col-primary" id="sidebar_bg_7">
+                                <label for="sidebar_bg_7"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="sidebar_bg" value="color_8" class="filled-in chk-col-primary" id="sidebar_bg_8">
+                                <label for="sidebar_bg_8"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="sidebar_bg" value="color_9" class="filled-in chk-col-primary" id="sidebar_bg_9">
+                                <label for="sidebar_bg_9"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="sidebar_bg" value="color_10" class="filled-in chk-col-primary" id="sidebar_bg_10">
+                                <label for="sidebar_bg_10"></label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Right sidebar end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="../../assets/plugins/common/common.min.js"></script>
+    <script src="../js/custom.min.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/quixnav.js"></script>
+    <script src="../js/styleSwitcher.js"></script>
+
+    <!-- Datatables -->
+    <script src="../../assets/plugins/datatables/js/jquery.dataTables.min.js"></script>
+
+
+    <!-- Init files -->
+    <script src="../js/dashboard/dashboard-5.js"></script>
+
+</body>
+
+</html>
