@@ -1,0 +1,67 @@
+{
+	"products" : [
+		{
+          "id" : "1",
+          "name" : "Flavor Twist Any Sandwich",
+          "price" : 1,
+          "description" : "Flavor Twist Any Sandwich",
+          "rating" : 4.40
+		},
+		{
+ 	 	  "id" : "2",
+          "name" : "Chicken Philly",
+          "price" : 9,
+          "description" : "Chicken Philly",
+          "rating" : 3.00
+
+		},
+		{
+		  "id" : "3",
+          "name" : "BBQ fit Beef",
+          "price" : 10,
+          "description" : "BBQ fit Beef",
+          "rating" : 3.00
+
+		},
+ 		{
+ 		"id" : "4",
+          "name" : "SandWiches",
+          "price" : 9,
+          "description" : "SandWiches",
+          "rating" : 4.20
+
+		},
+		{
+ 		"id" : "5",
+          "name" : "Large Fries",
+          "price" : 4,
+          "description" : "Large Fries",
+          "rating" : 3.00
+
+		},
+		{
+ 		"id" : "6",
+          "name" : "BBQ Pulled Pork",
+          "price" : 6,
+          "description" : "SandWiches",
+          "rating" : 4.40
+
+		},
+		{
+ 		"id" : "7",
+          "name" : "Hot Dog",
+          "price" : 23,
+          "description" : "Hot Dog",
+          "rating" : 3.00
+
+		},
+		{
+ 		  "id" : "8",
+          "name" : "Bowl of Chili",
+          "price" : 3,
+          "description" : "Bowl of Chili",
+          "rating" : 3.00
+
+		}
+	]
+}
