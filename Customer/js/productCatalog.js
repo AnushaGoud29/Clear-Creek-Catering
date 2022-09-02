@@ -7,6 +7,10 @@ productCatalogJS = {
    			return product;
    		}
    	}
+   },
+
+   loadProductsToLocalStorage : function(productCatalog){
+	localStorage.setItem("products", productCatalog);
    }
 
 };
