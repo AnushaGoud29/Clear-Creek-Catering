@@ -20,9 +20,6 @@
         <link href="css/bootstrap-icons.css" rel="stylesheet">
 
         <link href="css/tooplate-crispy-kitchen.css" rel="stylesheet">
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/cart.js"></script>
-
         
 <!--
 
@@ -114,7 +111,7 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                                     <h4 class="mb-0">Flavor Twist Any Sandwich</h4>
 
                                     <span class="price-tag bg-white shadow-lg ms-4"><small>$</small>1</span>
-                                    <button type="button" onclick="cartJS.addToCart('1')">Add to Cart</button>
+                                    <button type="button">Add to Cart</button>
                                     
 
                                     <div class="d-flex flex-wrap align-items-center w-100 mt-2">
@@ -142,7 +139,7 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                                     <h4 class="mb-0">Chicken Philly</h4>
 
                                     <span class="price-tag bg-white shadow-lg ms-4"><small>$</small>9</span>
-                                    <button type="button" onclick="cartJS.addToCart('2')">Add to Cart</button>
+                                    <button type="button">Add to Cart</button>
 
                                     <div class="d-flex flex-wrap align-items-center w-100 mt-2">
                                         <h6 class="reviews-text mb-0 me-3">3/5</h6>
@@ -169,7 +166,7 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                                     <h4 class="mb-0">BBQ fit Beef</h4>
 
                                     <span class="price-tag bg-white shadow-lg ms-4"><small>$</small>10</span>
-                                    <button type="button" onclick="cartJS.addToCart('3')">Add to Cart</button>
+                                    <button type="button">Add to Cart</button>
 
                                     
 
@@ -210,7 +207,7 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                                     <h4 class="mb-0">SandWiches</h4>
 
                                     <span class="price-tag bg-white shadow-lg ms-4"><small>$</small>9.00</span>
-                                    <button type="button"  onclick="cartJS.addToCart('4')">Add to cart</button>
+                                    <button type="button">Add to cart</button>
 
                                     <!-- <del class="ms-4"><small>$</small>55</del> -->
 
@@ -239,7 +236,7 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                                     <h4 class="mb-0">Large Fries</h4>
 
                                     <span class="price-tag bg-white shadow-lg ms-4"><small>$</small>4.00</span>
-                                    <button type="button" onclick="cartJS.addToCart('5')">Add to Cart</button>
+                                    <button type="button">Add to Cart</button>
 
                                     <div class="d-flex flex-wrap align-items-center w-100 mt-2">
                                         <h6 class="reviews-text mb-0 me-3">3/5</h6>
@@ -276,7 +273,7 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                                     <h4 class="mb-0">BBQ Pulled Pork</h4>
 
                                     <span class="price-tag bg-white shadow-lg ms-4"><small>$</small>6.00</span>
-                                    <button type="button" onclick="cartJS.addToCart('6')">Add to Cart</button>
+                                    <button type="button">Add to Cart</button>
 
                                     <div class="d-flex flex-wrap align-items-center w-100 mt-2">
                                         <h6 class="reviews-text mb-0 me-3">4.4/5</h6>
@@ -303,7 +300,7 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                                     <h4 class="mb-0">Hot Dog</h4>
 
                                     <span class="price-tag bg-white shadow-lg ms-4"><small>$</small>23.00</span>
-                                    <button type="button" onclick="cartJS.addToCart('7')">Add to Cart</button>
+                                    <button type="button">Add to Cart</button>
 
                                     <div class="d-flex flex-wrap align-items-center w-100 mt-2">
                                         <h6 class="reviews-text mb-0 me-3">3/5</h6>
@@ -330,7 +327,7 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                                     <h4 class="mb-0">Bowl of Chili</h4>
 
                                     <span class="price-tag bg-white shadow-lg ms-4"><small>$</small>3.00</span>
-                                    <button type="button"  onclick="cartJS.addToCart('8')">Add to Cart</button>
+                                    <button type="button">Add to Cart</button>
 
                                     <div class="d-flex flex-wrap align-items-center w-100 mt-2">
                                         <h6 class="reviews-text mb-0 me-3">3/5</h6>
@@ -405,11 +402,11 @@ https://www.tooplate.com/view/2129-crispy-kitchen
         </footer>
 
         <!-- Modal -->
-        <div class="modal fade" id="BModal" tabindex="-1" aria-labelledby="BModal" aria-hidden="true">
+        <div class="modal fade" id="BookingModal" tabindex="-1" aria-labelledby="BookingModal" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h3 class="mb-0">Sign Up</h3>
+                        <h3 class="mb-0">SignUp</h3>
 
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
@@ -480,95 +477,6 @@ https://www.tooplate.com/view/2129-crispy-kitchen
             </div>
         </div>
 
-
-        <!-- Modal -->
-        
-        <div class="modal fade" id="BookingModal" tabindex="-1" aria-labelledby="BookingModal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="mb-0">Sign In</h3>
-
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-
-                    <div class="modal-body d-flex flex-column justify-content-center">
-                        <div class="booking">
-                            
-                           
-                                <div class="col-lg-6 col-12">
-                                    <label for="email" class="form-label">User name/Email </label>
-
-                                    <input type="email" name="email" id="email" pattern="[^ @]@[^ @]" class="form-control" placeholder="your@email.com" required>
-                                </div>
-                                <div class="col-lg-6 col-12">
-                                    <label for="message" class="form-label">Password</label>
-
-                                    <input type="email" name="email" id="email" pattern="[^ @]@[^ @]" class="form-control" placeholder="Password" required>
-                                </div>
-                                
-                            </div>
-
-
-                          
-                        
-
-
-                            <div class="col-lg-4 col-8" style="background-color:white">
-                              
-                              <span class="psw">Forgot <a href="#">password?</a></span>
-                            </div><br>
-
-                                <div class="space">
-                                   
-
-                                </div>
-                                
-                                
-                                    
-                                <div class="col-lg-4 col-8">
-                                    
-                                    <button type="submit" class="form-control" style="background-color:white;">SignIn</button>
-                                    
-                                    
-
-                                    
-                                </div>    
-
-
-                                
-                                <a class="navbar-brand" >
-                                    Or
-                                </a>
-                                
-
-                                <div class="space"></div>
-
-                                
-                                
-                                <div class="col-lg-4 col-8">
-                                    
-                                    <button type="button" class="custom-btn btn btn-danger" data-bs-toggle="modal" data-bs-target="#BModal">SignUp</button>
-                                </div>
-                                
-
-                                
-                                    
-                                        
-                
-                                
-
-                            </form>
-                        </div>
-                    </div>
-
-                  
-                    <div class="modal-footer"></div>
-                    
-                </div>
-                
-            </div>
-        </div>
         <!-- JAVASCRIPT FILES -->
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
