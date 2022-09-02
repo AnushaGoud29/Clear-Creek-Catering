@@ -8,7 +8,7 @@ cartJS = {
        if(orderStr){ // If item found, increase the qty. Otherwise add the item to the existing list
           orderObject = JSON.parse(orderStr);
           if(orderObject[productId]){
-          	orderObject[productId].qty = orderObject[productId].qty + 1;
+          	orderObject[productId].qty = parseInt(orderObject[productId].qty) + 1;
           }
           else{
           	orderObject[productId] = { "productId" : productId, "qty" : 1 };
@@ -35,7 +35,7 @@ cartJS = {
 		const orderKey = "orderDetails";
 		var orderStr = localStorage.getItem(orderKey);
 		var orderJson = JSON.parse(orderStr);
-		orderJson[productId].qty = qty;
+		orderJson[productId].qty = parseInt(qty);
 		localStorage.setItem(orderKey, JSON.stringify(orderJson));
 		location.reload();
      },
