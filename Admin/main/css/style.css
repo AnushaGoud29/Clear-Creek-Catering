@@ -16987,3 +16987,7 @@ button {
   flex-basis: 14.28571%; }
 
 /*# sourceMappingURL=style.css.map */
+
+#adminOrders tbody tr td{
+  padding: 3px;
+}

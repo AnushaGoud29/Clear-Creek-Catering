@@ -22,6 +22,7 @@
         <link href="css/tooplate-crispy-kitchen.css" rel="stylesheet">
         <script type="text/javascript" src="js/cart.js"></script>
         <link href="social-icon-blink bi-facebook" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
         
 <!--
 
@@ -33,6 +34,8 @@ https://www.tooplate.com/view/2129-crispy-kitchen
     </head>
     
     <body>
+
+        <div id="loader"></div>
         
         <nav class="navbar navbar-expand-lg bg-white shadow-lg">
             <div class="container">
@@ -45,7 +48,7 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                 </a>
 
                 <div class="d-lg-none">
-                    <button type="button" class="custom-btn btn btn-danger" data-bs-toggle="modal" data-bs-target="#BookingModal">SignIn/SignUp</button>
+                    <button type="button" class="custom-btn btn btn-danger" data-bs-toggle="modal" data-bs-target="#BookingModalSignin">SignIn/SignUp</button>
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -54,9 +57,9 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
 
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="menu.html">Menu</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link active" href="orderonline.html">OrderOnline</a>
                         </li>
@@ -64,7 +67,12 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                             <a class="nav-link" href="cart.html">Cart</a>
                         </li>
 
-                       
+                        <li class="nav-item">
+                            <a class="nav-link active" href="myorder.html">My Orders</a>
+                        </li>
+                        <li class="nav-item" id="adminNav">
+                            <a class="nav-link " href="/admin/main/template/adminOrders.html">Admin</a>
+                        </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">ContactUs</a>
@@ -72,9 +80,22 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                     </ul>
                 </div>
 
-                <div class="d-none d-lg-block">
-                    <button type="button" class="custom-btn btn btn-danger" data-bs-toggle="modal" data-bs-target="#BookingModal">SignIn/SignUp</button>
+              
+                <div id="navLogin" class="">
+                    <button type="button" class="custom-btn btn btn-danger" data-bs-toggle="modal" data-bs-target="#BookingModalSignin">SignIn/SignUp</button>
                 </div>
+                <div id="currentUserSection"  class="">
+                    <button type="button" class="btn btn-default btn-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                          </svg><span id ="currentUser"></span> 
+                      </button>
+
+                      <button id="logout" type="button" class="btn btn-default btn-sm">
+                            Logout
+                        </button>
+                </div>
+
 
             </div>
         </nav>
@@ -119,7 +140,14 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                                     <h4 class="mb-0">Flavor Twist Any Sandwich</h4>
 
                                     <span class="price-tag bg-white shadow-lg ms-4"><small>$</small>1</span>
-                                    <button type="button" onclick="cartJS.addToCart('1')">Add to Cart</button>
+                                    <button type="button" onclick="addToCart(this,'1', 'Flavor Twist Any Sandwich', 1)"><i class="bi bi-cart-plus"></i></button>
+
+
+                                    <button type="button" onclick="prepareFood(this,'1', 'Flavor Twist Any Sandwich', 1)">
+                                    <img src="images/prepare-cooking.jpg" />
+                                    </button>
+                                    
+
                                     
 
                                     <div class="d-flex flex-wrap align-items-center w-100 mt-2">
@@ -155,7 +183,12 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                                     <h4 class="mb-0">Chicken Philly</h4>
 
                                     <span class="price-tag bg-white shadow-lg ms-4"><small>$</small>9</span>
-                                    <button type="button" onclick="cartJS.addToCart('2')">Add to Cart</button>
+                                    <button type="button" onclick="addToCart(this,'2','Chicken Philly',9)"><i class="bi bi-cart-plus"></i></button>
+
+                                    <button type="button" onclick="prepareFood(this,'2','Chicken Philly',9)">
+                                        <img src="images/prepare-cooking.jpg" />
+                                        </button>
+                                    
 
                                     <div class="d-flex flex-wrap align-items-center w-100 mt-2">
                                         <h6 class="reviews-text mb-0 me-3">3/5</h6>
@@ -194,9 +227,13 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                                     <h4 class="mb-0">BBQ fit Beef</h4>
 
                                     <span class="price-tag bg-white shadow-lg ms-4"><small>$</small>10</span>
-                                    <button type="button" onclick="cartJS.addToCart('3')">Add to Cart</button>
+                                    <button type="button" onclick="addToCart(this,'3','BBQ fit Beef', 10)"><i class="bi bi-cart-plus"></i></button>
 
                                     
+
+                                    <button type="button" onclick="prepareFood(this,'3','BBQ fit Beef', 10)">
+                                        <img src="images/prepare-cooking.jpg" />
+                                        </button>
 
                                     <div class="d-flex flex-wrap align-items-center w-100 mt-2">
                                         <h6 class="reviews-text mb-0 me-3">3/5</h6>
@@ -249,7 +286,11 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                                      <h4 class="mb-0">SandWich</h4>
  
                                      <span class="price-tag bg-white shadow-lg ms-4"><small>$</small>9.00</span>
-                                     <button type="button" onclick="cartJS.addToCart('4')">Add to Cart</button>
+                                     <button type="button" onclick="addToCart(this,'4', 'SandWich', '9')"><i class="bi bi-cart-plus"></i></button>
+
+                                     <button type="button" onclick="prepareFood(this,'4', 'SandWich', '9')">
+                                        <img src="images/prepare-cooking.jpg" />
+                                        </button>
                                     
 
                                     <div class="d-flex flex-wrap align-items-center w-100 mt-2">
@@ -284,7 +325,11 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                                     <h4 class="mb-0">Ham 'n' Cheddar Broccoli</h4>
 
                                     <span class="price-tag bg-white shadow-lg ms-4"><small>$</small>4.00</span>
-                                    <button type="button" onclick="cartJS.addToCart('5')">Add to Cart</button>
+                                    <button type="button" onclick="addToCart(this,'5','Ham \'n\' Cheddar Broccoli', 4)"><i class="bi bi-cart-plus"></i></button>
+
+                                    <button type="button" onclick="prepareFood(this,'5','Ham \'n\' Cheddar Broccoli', 4)">
+                                        <img src="images/prepare-cooking.jpg" />
+                                        </button>
 
                                     <div class="d-flex flex-wrap align-items-center w-100 mt-2">
                                         <h6 class="reviews-text mb-0 me-3">3/5</h6>
@@ -320,9 +365,12 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                                     <h4 class="mb-0"> Chili Cheese Dog</h4>
 
                                     <span class="price-tag bg-white shadow-lg ms-4"><small>$</small>10</span>
-                                    <button type="button" onclick="cartJS.addToCart('6')">Add to Cart</button>
+                                    <button type="button" onclick="addToCart(this,'6','Chili Cheese Dog',10)"><i class="bi bi-cart-plus"></i></button>
 
                                     
+                                    <button type="button" onclick="prepareFood(this,'6','Chili Cheese Dog',10)">
+                                        <img src="images/prepare-cooking.jpg" />
+                                        </button>
 
                                     <div class="d-flex flex-wrap align-items-center w-100 mt-2">
                                         <h6 class="reviews-text mb-0 me-3">3/5</h6>
@@ -355,7 +403,11 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                                     <h4 class="mb-0">BBQ Pulled Pork</h4>
 
                                     <span class="price-tag bg-white shadow-lg ms-4"><small>$</small>6.00</span>
-                                    <button type="button" onclick="cartJS.addToCart('7')">Add to Cart</button>
+                                    <button type="button" onclick="addToCart(this,'7','BBQ Pulled Pork', 6)"><i class="bi bi-cart-plus"></i></button>
+
+                                    <button type="button" onclick="prepareFood(this,'7','BBQ Pulled Pork', 6)">
+                                        <img src="images/prepare-cooking.jpg" />
+                                        </button>
 
                                     <div class="d-flex flex-wrap align-items-center w-100 mt-2">
                                         <h6 class="reviews-text mb-0 me-3">4.4/5</h6>
@@ -388,7 +440,11 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                                     <h4 class="mb-0">Hot Dog</h4>
 
                                     <span class="price-tag bg-white shadow-lg ms-4"><small>$</small>23.00</span>
-                                    <button type="button" onclick="cartJS.addToCart('8')">Add to Cart</button>
+                                    <button type="button" onclick="addToCart(this,'8','Hot Dog', 23)"><i class="bi bi-cart-plus"></i></button>
+
+                                    <button type="button" onclick="prepareFood(this,'8','Hot Dog', 23)">
+                                        <img src="images/prepare-cooking.jpg" />
+                                        </button>
 
                                     <div class="d-flex flex-wrap align-items-center w-100 mt-2">
                                         <h6 class="reviews-text mb-0 me-3">3/5</h6>
@@ -420,8 +476,11 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                                     <h4 class="mb-0">Bowl of Chili</h4>
 
                                     <span class="price-tag bg-white shadow-lg ms-4"><small>$</small>3.00</span>
-                                    <button type="button" onclick="cartJS.addToCart('9')">Add to Cart</button>
+                                    <button type="button" onclick="addToCart(this,'9','Bowl of Chili', 3)"><i class="bi bi-cart-plus"></i></button>
 
+                                    <button type="button" onclick="prepareFood(this,'9','Bowl of Chili', 3)">
+                                        <img src="images/prepare-cooking.jpg" />
+                                        </button>
                                     <div class="d-flex flex-wrap align-items-center w-100 mt-2">
                                         <h6 class="reviews-text mb-0 me-3">3/5</h6>
 
@@ -502,53 +561,53 @@ https://www.tooplate.com/view/2129-crispy-kitchen
         </footer>
 
         <!-- Modal -->
-        <div class="modal fade" id="BModal" tabindex="-1" aria-labelledby="BModal" aria-hidden="true">
+        <div class="modal fade" id="BModalSignup" tabindex="-1" aria-labelledby="BModalSignup" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h3 class="mb-0">Sign Up</h3>
-
+        
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-
+        
                     <div class="modal-body d-flex flex-column justify-content-center">
                         <div class="booking">
                             
                             <form class="booking-form row" role="form" action="#" method="post">
                                 <div class="col-lg-6 col-12">
                                     <label for="name" class="form-label">Full Name</label>
-
-                                    <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
+        
+                                    <input type="text" name="name" id="fname" class="form-control" placeholder="Your Name" required>
                                 </div>
-
+        
                                 <div class="col-lg-6 col-12">
                                     <label for="email" class="form-label">Email Address</label>
-
-                                    <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="your@email.com" required>
+        
+                                    <input type="email" name="email" id="semail" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="your@email.com" required>
                                 </div>
-
+        
                                 <div class="col-lg-6 col-12">
                                     <label for="phone" class="form-label">Phone Number</label>
-
-                                    <input type="telephone" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" placeholder="123-456-7890">
+        
+                                    <input type="telephone" name="phone" id="sphone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" placeholder="123-456-7890">
                                 </div>
-
+        
                                 <div class="col-lg-6 col-12">
                                     <label for="people" class="form-label">Number of persons</label>
-
-                                    <input type="text" name="people" id="people" class="form-control" placeholder="12 persons">
+        
+                                    <input type="text" name="people" id="peopleCount" class="form-control" placeholder="12 persons">
                                 </div>
-
+        
                                 <div class="col-lg-6 col-12">
                                     <label for="date" class="form-label">Date</label>
-
-                                    <input type="date" name="date" id="date" value="" class="form-control">
+        
+                                    <input type="date" name="date" id="dateBirth" value="" class="form-control">
                                 </div>
-
+        
                                 <div class="col-lg-6 col-12">
                                     <label for="time" class="form-label">Time</label>
-
-                                    <select class="form-select form-control" name="time" id="time">
+        
+                                    <select class="form-select form-control" name="time" id="stime">
                                       <option value="5" selected>5:00 PM</option>
                                       <option value="6">6:00 PM</option>
                                       <option value="7">7:00 PM</option>
@@ -556,26 +615,28 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                                       <option value="9">9:00 PM</option>
                                     </select>
                                 </div>
-
+        
                                
                                 <div class="col-12">
-                                    <label for="message" class="form-label">Password</label>
-
-                                    <textarea class="form-control" rows="1" id="message" name="message" placeholder=""></textarea>
+                                    <label for="spassowrd" class="form-label">Password</label>
+        
+                                    <input type="password" minlength="6" name="spassoword" id="spassowrd"  class="form-control">
                                 </div>
                                 <div class="col-12">
-                                    <label for="message" class="form-label">Confirm Password</label>
-
-                                    <textarea class="form-control" rows="1" id="message" name="message" placeholder=""></textarea>
+                                    <label for="scpassowrd" class="form-label">Confirm Password</label>
+        
+                                    <input type="password"  minlength="6" name="scpassowrd" id="scpassowrd"  class="form-control">
                                 </div>
-
                                 <div class="col-lg-4 col-12 ms-auto">
-                                    <button type="submit" class="form-control">Submit Request</button>
+                                    <span id="infoMsg"></span>
+                                </div>
+                                <div class="col-lg-4 col-12 ms-auto">
+                                    <button type="button" id="signup" class="form-control">SignUp</button>
                                 </div>
                             </form>
                         </div>
                     </div>
-
+        
                     <div class="modal-footer"></div>
                     
                 </div>
@@ -583,89 +644,81 @@ https://www.tooplate.com/view/2129-crispy-kitchen
             </div>
         </div>
 
-
         <!-- Modal -->
         
-        <div class="modal fade" id="BookingModal" tabindex="-1" aria-labelledby="BookingModal" aria-hidden="true">
+        <div class="modal fade" id="BookingModalSignin" tabindex="-1" aria-labelledby="BookingModalSignin" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h3 class="mb-0">Sign In</h3>
-
+        
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-
+        
                     <div class="modal-body d-flex flex-column justify-content-center">
                         <div class="booking">
                             
                            
                                 <div class="col-lg-6 col-12">
                                     <label for="email" class="form-label">User name/Email </label>
-
+        
                                     <input type="email" name="email" id="email" pattern="[^ @]@[^ @]" class="form-control" placeholder="your@email.com" required>
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <label for="message" class="form-label">Password</label>
-
-                                    <input type="email" name="email" id="email" pattern="[^ @]@[^ @]" class="form-control" placeholder="Password" required>
+        
+                                    <input type="password"  minlength="6" name="password" id="password"  class="form-control" placeholder="Password" required>
                                 </div>
                                 
                             </div>
-
-
+        
+        
                           
                         
-
-
+        
+        
                             <div class="col-lg-4 col-8" style="background-color:white">
                               
                               <span class="psw">Forgot <a href="#">password?</a></span>
                             </div><br>
-
+        
                                 <div class="space">
                                    
-
+        
                                 </div>
                                 
                                 
                                     
                                 <div class="col-lg-4 col-8">
                                     
-                                    <button type="submit" class="form-control" style="background-color:white;">SignIn</button>
+                                    <button type="button" id="signIn" class="form-control" style="background-color:white;">SignIn</button>
                                     
                                     
-
+        
                                     
                                 </div>    
-
-
+        
+        
                                 
                                 <p class="navbar-brand" >
                                     Or
                                 </p>
                                 
-
+        
                                 <div class="space"></div>
-
+        
                                 
                                 
                                 <div class="col-lg-4 col-8">
                                     
-                                    <button type="button" class="form-control" data-bs-toggle="modal" style="background-color:rgb(248, 11, 11);" data-bs-target="#BModal">SignUp</button>
+                                    <button type="button" class="form-control" data-bs-toggle="modal" style="background-color:rgb(248, 11, 11);" data-bs-target="#BModalSignup">SignUp</button>
                                 </div>
                                 
                                 
-
-                                
-                                    
-                                        
-                
-                                
-
                             </form>
                         </div>
                     </div>
-
+        
                   
                     <div class="modal-footer"></div>
                     
@@ -678,6 +731,52 @@ https://www.tooplate.com/view/2129-crispy-kitchen
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/custom.js"></script>
+            
+        <script  src="js/firebase.db.js"></script>
+        <script type="module">
+                 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+                import { getFirestore, doc, getDoc, setDoc,addDoc, getDocs, collection, updateDoc,  arrayUnion, arrayRemove  } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
+                import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile, signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+                const firebaseConfig = {
+    apiKey: "AIzaSyAOIvfuATzcgDaO6YB1nBLcMUucm8hYa4M",
+    authDomain: "clear-creek-catering.firebaseapp.com",
+    databaseURL: "https://clear-creek-catering-default-rtdb.firebaseio.com",
+    projectId: "clear-creek-catering",
+    storageBucket: "clear-creek-catering.appspot.com",
+    messagingSenderId: "167084086844",
+    appId: "1:167084086844:web:1779b328b8f2654f1f1539",
+    measurementId: "G-69SMKTTVEL"
+  };
+
+      window.collection = collection;
+      window.getDoc = getDoc;
+      window.getDocs = getDocs;
+      window.getAuth = getAuth;
+      window.signInWithEmailAndPassword= signInWithEmailAndPassword;
+      window.createUserWithEmailAndPassword = createUserWithEmailAndPassword;
+      window.updateProfile = updateProfile;
+      window.signOut  = signOut ;
+      window.setDoc  = setDoc ;
+      window.addDoc = addDoc;
+      window.updateDoc = updateDoc;
+      window.arrayUnion =arrayUnion;
+      window.arrayRemove = arrayRemove ;
+      
+      window.doc = doc;
+        window.firebaseApp = initializeApp(firebaseConfig);
+        window.firbasedb = getFirestore(window.firebaseApp);
+        // getUsers(window.firbasedb);
+        let token = sessionStorage.getItem('token');
+         let uname = sessionStorage.getItem("displayname");
+         if(token && uname){
+            $('div#navLogin').css('display','none');
+            $('div#currentUserSection').css('display','block');
+            $('#currentUser').html(uname);
+         }else{
+            $('div#navLogin').css('display','block');
+            $('div#currentUserSection').css('display','none');
+         }
+      </script>
 
     </body>
 </html>

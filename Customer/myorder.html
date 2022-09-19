@@ -8,7 +8,7 @@
     <meta name="author" content="">
 
     <!-- Added title -->
-    <title>Cart</title>
+    <title>My Order</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -81,7 +81,6 @@
                     <li class="nav-item" id="adminNav">
                         <a class="nav-link " href="/admin/main/template/adminOrders.html">Admin</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
@@ -114,7 +113,7 @@
                 <div class="row">
 
                     <div class="col-lg-10 col-12 mx-auto">
-                        <h1 class="text-white">Cart</h1>
+                        <h1 class="text-white">My Orders</h1>
 
                         <strong class="text-white">Listing your cravings</strong>
                     </div>
@@ -138,6 +137,7 @@
                             <th class="product-price">Price</th>
                             <th class="product-quantity">Quantity</th>
                             <!-- <th class="product-remove">Remove</th> -->
+                            <th class="product-status">Status</th>
                             <th class="product-subtotal">Subtotal</th>
                         </tr>
                     </thead>
@@ -168,11 +168,11 @@
         <br />
 
         <p class="total">Total Price: $<span class="price" id="totalPrice"></span></p>
-        <div class="container" style = "position:relative; text-align: right;">
+        <!-- <div class="container" style = "position:relative; text-align: right;">
             <a class="navbar-brand" href="Payment.html">
                 Proceed To Checkout  
             </a>
-        </div>
+        </div> -->
 
         
     
@@ -457,7 +457,7 @@ measurementId: "G-69SMKTTVEL"
   <script type="text/javascript">
         
     $(document).ready(function(){
-        getCartItems();
+        getCartItems('myorders', 'Orders');
        // cartJS.fetchOrder();
     });
 </script>

@@ -21,6 +21,7 @@
 
         <link href="css/tooplate-crispy-kitchen.css" rel="stylesheet">
         <link href="social-icon-blink bi-facebook" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
 <!--
 
 Tooplate 2129 Crispy Kitchen
@@ -31,7 +32,7 @@ https://www.tooplate.com/view/2129-crispy-kitchen
     </head>
     
     <body>
-        
+        <div id="loader"></div>
         <nav class="navbar navbar-expand-lg bg-white shadow-lg">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,15 +54,22 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                         </li>
 
                         
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="menu.html">Menu</a>
-                        </li>
+                        </li> -->
 
                         <li class="nav-item">
                             <a class="nav-link" href="orderonline.html">Order Online</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="cart.html">Cart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="myorder.html">My Orders</a>
+                        </li>
+
+                        <li class="nav-item" id="adminNav">
+                            <a class="nav-link " href="/admin/main/template/adminOrders.html">Admin</a>
                         </li>
 
 
@@ -71,7 +79,20 @@ https://www.tooplate.com/view/2129-crispy-kitchen
                     </ul>
                 </div>
 
-                
+                <div id="navLogin" class="">
+                    <button type="button" class="custom-btn btn btn-danger" data-bs-toggle="modal" data-bs-target="#BookingModalSignin">SignIn/SignUp</button>
+                </div>
+                <div id="currentUserSection"  class="">
+                    <button type="button" class="btn btn-default btn-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                          </svg><span id ="currentUser"></span> 
+                      </button>
+
+                      <button id="logout" type="button" class="btn btn-default btn-sm">
+                            Logout
+                        </button>
+                </div>
 
             </div>
         </nav>
@@ -116,37 +137,39 @@ https://www.tooplate.com/view/2129-crispy-kitchen
             <section class="contact section-padding">
                 <div class="container">
                     <div class="row">
-
+                        <div class="col-12" id="orderSuccess">
+                            <h2 class="mb-4">Order placed successfully!</h2>
+                        </div>
                         <div class="col-12">
                             <h2 class="mb-4">Credit Card/Debit Card</h2>
                         </div>
 
                         <div class="col-lg-6 col-12">
-                            <form class="custom-form contact-form row" action="#" method="post" role="form">
+                            <form class="custom-form contact-form row"   role="form">
                                 <div class="col-lg-6 col-6">
-                                    <label for="contact-name" class="form-labyuel">Name on the card</label>
+                                    <label for="nameOnCard" class="form-labyuel">Name on the card</label>
 
-                                    <input type="text" name="contact-name" id="contact-name" class="form-control" placeholder="Full Name" required>
+                                    <input type="text" name="nameOnCard" id="nameOnCard" class="form-control" placeholder="Full Name" required>
                                 </div>
 
                                 <div class="col-lg-6 col-6">
-                                    <label for="contact-phone" class="form-label">Card number</label>
+                                    <label for="cardNumber" class="form-label">Card number</label>
 
-                                    <input type="telephone" name="contact-phone" id="contact-phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" placeholder="123-456-7890">
+                                    <input type="telephone" name="cardNumber" id="cardNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" placeholder="123-456-7890">
                                 </div>
 
                                 <div class="col-12">
-                                    <label for="contact-email" class="form-label">Email</label>
+                                    <label for="cardEmail" class="form-label">Email</label>
 
-                                    <input type="email" name="contact-email" id="contact-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Your Email" required="">
+                                    <input type="email" name="cardEmail" id="cardEmail" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Your Email" required="">
 
-                                    <label for="contact-message" class="form-label">Billing Address</label>
+                                    <label for="billAddress" class="form-label">Billing Address</label>
 
-                                    <textarea class="form-control" rows="5" id="contact-message" name="contact-message" placeholder="Billing Adress"></textarea>
+                                    <textarea class="form-control" rows="5" id="billAddress" name="billAddress" placeholder="Billing Adress"></textarea>
                                 </div>
 
                                 <div class="col-lg-5 col-12 ms-auto">
-                                    <button type="submit" class="form-control">Proceed</button>
+                                    <button type="button" id="orderProceed" class="form-control">Proceed</button>
                                 </div>
                             </form>
                         </div>
@@ -155,48 +178,17 @@ https://www.tooplate.com/view/2129-crispy-kitchen
 
                             <h5>Order Details</h5>
 
-                            
-                                <div class="d-flex mb-lg-1">
-                                    <p>Chicken Philly </p>
-                                    <p class="ms-5">9$ </p>
-                                </div>
-
-
-                                <div class="d-flex mb-lg-1">
-                                    <p>BBQ fit Beef</p>
-                                    <p class="ms-5">10$ </p>
-                                </div>
-
-
-                                <div class="d-flex mb-lg-1">
-                                    <p>SandWiches </p>
-                                    <p class="ms-5">9$ </p>
-                                </div>
-
-
-                                <div class="d-flex mb-lg-1">
-                                    <p>Large Fries</p>
-                                    <p class="ms-5">4$ </p>
-                                </div>
-                                <div class="d-flex mb-lg-1">
-                                    <p>TAXES </p>
-                                    <p class="ms-5">1.3$ </p>
-                                </div>
-
-
-                 
-
-
-
-
-
+                            <div id="orderDetails">
+                                
+                            </div>
+                               
 
                             <h5>Subtotal</h5>
 
                             <div class="d-flex">
                                 <p>TOTAL</p>
 
-                                <p class="ms-5">33.3$</p>
+                                <p class="ms-5" id="orderTotal"></p>
                             </div>
 
                         </div>
@@ -267,86 +259,228 @@ https://www.tooplate.com/view/2129-crispy-kitchen
              
         </footer>
 
-        <!-- Modal -->
-        <div class="modal fade" id="BookingModal" tabindex="-1" aria-labelledby="BookingModal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="mb-0">Reserve a table</h3>
-
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-
-                    <div class="modal-body d-flex flex-column justify-content-center">
-                        <div class="booking">
-                            
-                            <form class="booking-form row" role="form" action="#" method="post">
-                                <div class="col-lg-6 col-12">
-                                    <label for="name" class="form-label">Full Name</label>
-
-                                    <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <label for="email" class="form-label">Email Address</label>
-
-                                    <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="your@email.com" required>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <label for="phone" class="form-label">Phone Number</label>
-
-                                    <input type="telephone" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" placeholder="123-456-7890">
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <label for="people" class="form-label">Number of persons</label>
-
-                                    <input type="text" name="people" id="people" class="form-control" placeholder="12 persons">
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <label for="date" class="form-label">Date</label>
-
-                                    <input type="date" name="date" id="date" value="" class="form-control">
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <label for="time" class="form-label">Time</label>
-
-                                    <select class="form-select form-control" name="time" id="time">
-                                      <option value="5" selected>5:00 PM</option>
-                                      <option value="6">6:00 PM</option>
-                                      <option value="7">7:00 PM</option>
-                                      <option value="8">8:00 PM</option>
-                                      <option value="9">9:00 PM</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-12">
-                                    <label for="message" class="form-label">Special Request</label>
-
-                                    <textarea class="form-control" rows="4" id="message" name="message" placeholder=""></textarea>
-                                </div>
-
-                                <div class="col-lg-4 col-12 ms-auto">
-                                    <button type="submit" class="form-control">Submit Request</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer"></div>
-                    
+      <!-- Modal -->
+      <div class="modal fade" id="BModalSignup" tabindex="-1" aria-labelledby="BModalSignup" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="mb-0">Sign Up</h3>
+    
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+    
+                <div class="modal-body d-flex flex-column justify-content-center">
+                    <div class="booking">
+                        
+                        <form class="booking-form row" role="form" action="#" method="post">
+                            <div class="col-lg-6 col-12">
+                                <label for="name" class="form-label">Full Name</label>
+    
+                                <input type="text" name="name" id="fname" class="form-control" placeholder="Your Name" required>
+                            </div>
+    
+                            <div class="col-lg-6 col-12">
+                                <label for="email" class="form-label">Email Address</label>
+    
+                                <input type="email" name="email" id="semail" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="your@email.com" required>
+                            </div>
+    
+                            <div class="col-lg-6 col-12">
+                                <label for="phone" class="form-label">Phone Number</label>
+    
+                                <input type="telephone" name="phone" id="sphone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" placeholder="123-456-7890">
+                            </div>
+    
+                            <div class="col-lg-6 col-12">
+                                <label for="people" class="form-label">Number of persons</label>
+    
+                                <input type="text" name="people" id="peopleCount" class="form-control" placeholder="12 persons">
+                            </div>
+    
+                            <div class="col-lg-6 col-12">
+                                <label for="date" class="form-label">Date</label>
+    
+                                <input type="date" name="date" id="dateBirth" value="" class="form-control">
+                            </div>
+    
+                            <div class="col-lg-6 col-12">
+                                <label for="time" class="form-label">Time</label>
+    
+                                <select class="form-select form-control" name="time" id="stime">
+                                  <option value="5" selected>5:00 PM</option>
+                                  <option value="6">6:00 PM</option>
+                                  <option value="7">7:00 PM</option>
+                                  <option value="8">8:00 PM</option>
+                                  <option value="9">9:00 PM</option>
+                                </select>
+                            </div>
+    
+                           
+                            <div class="col-12">
+                                <label for="spassowrd" class="form-label">Password</label>
+    
+                                <input type="password" minlength="6" name="spassoword" id="spassowrd"  class="form-control">
+                            </div>
+                            <div class="col-12">
+                                <label for="scpassowrd" class="form-label">Confirm Password</label>
+    
+                                <input type="password"  minlength="6" name="scpassowrd" id="scpassowrd"  class="form-control">
+                            </div>
+                            <div class="col-lg-4 col-12 ms-auto">
+                                <span id="infoMsg"></span>
+                            </div>
+                            <div class="col-lg-4 col-12 ms-auto">
+                                <button type="button" id="signup" class="form-control">SignUp</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+    
+                <div class="modal-footer"></div>
                 
             </div>
+            
         </div>
+    </div>
 
+    <!-- Modal -->
+    
+    <div class="modal fade" id="BookingModalSignin" tabindex="-1" aria-labelledby="BookingModalSignin" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="mb-0">Sign In</h3>
+    
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+    
+                <div class="modal-body d-flex flex-column justify-content-center">
+                    <div class="booking">
+                        
+                       
+                            <div class="col-lg-6 col-12">
+                                <label for="email" class="form-label">User name/Email </label>
+    
+                                <input type="email" name="email" id="email" pattern="[^ @]@[^ @]" class="form-control" placeholder="your@email.com" required>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <label for="message" class="form-label">Password</label>
+    
+                                <input type="password"  minlength="6" name="password" id="password"  class="form-control" placeholder="Password" required>
+                            </div>
+                            
+                        </div>
+    
+    
+                      
+                    
+    
+    
+                        <div class="col-lg-4 col-8" style="background-color:white">
+                          
+                          <span class="psw">Forgot <a href="#">password?</a></span>
+                        </div><br>
+    
+                            <div class="space">
+                               
+    
+                            </div>
+                            
+                            
+                                
+                            <div class="col-lg-4 col-8">
+                                
+                                <button type="button" id="signIn" class="form-control" style="background-color:white;">SignIn</button>
+                                
+                                
+    
+                                
+                            </div>    
+    
+    
+                            
+                            <p class="navbar-brand" >
+                                Or
+                            </p>
+                            
+    
+                            <div class="space"></div>
+    
+                            
+                            
+                            <div class="col-lg-4 col-8">
+                                
+                                <button type="button" class="form-control" data-bs-toggle="modal" style="background-color:rgb(248, 11, 11);" data-bs-target="#BModalSignup">SignUp</button>
+                            </div>
+                            
+                            
+                        </form>
+                    </div>
+                </div>
+    
+              
+                <div class="modal-footer"></div>
+                
+            </div>
+            
+        </div>
         <!-- JAVASCRIPT FILES -->
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/custom.js"></script>
+
+        <script  src="js/firebase.db.js"></script>
+        <script type="module">
+                 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+                import { getFirestore, doc, getDoc, setDoc,addDoc, getDocs, collection, updateDoc,  arrayUnion, arrayRemove  } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
+                import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile, signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+                const firebaseConfig = {
+    apiKey: "AIzaSyAOIvfuATzcgDaO6YB1nBLcMUucm8hYa4M",
+    authDomain: "clear-creek-catering.firebaseapp.com",
+    databaseURL: "https://clear-creek-catering-default-rtdb.firebaseio.com",
+    projectId: "clear-creek-catering",
+    storageBucket: "clear-creek-catering.appspot.com",
+    messagingSenderId: "167084086844",
+    appId: "1:167084086844:web:1779b328b8f2654f1f1539",
+    measurementId: "G-69SMKTTVEL"
+  };
+
+      window.collection = collection;
+      window.getDoc = getDoc;
+      window.getDocs = getDocs;
+      window.getAuth = getAuth;
+      window.signInWithEmailAndPassword= signInWithEmailAndPassword;
+      window.createUserWithEmailAndPassword = createUserWithEmailAndPassword;
+      window.updateProfile = updateProfile;
+      window.signOut  = signOut ;
+      window.setDoc  = setDoc ;
+      window.addDoc = addDoc;
+      window.updateDoc = updateDoc;
+      window.arrayUnion =arrayUnion;
+      window.arrayRemove = arrayRemove ;
+      
+      window.doc = doc;
+        window.firebaseApp = initializeApp(firebaseConfig);
+        window.firbasedb = getFirestore(window.firebaseApp);
+        // getUsers(window.firbasedb);
+        let token = sessionStorage.getItem('token');
+         let uname = sessionStorage.getItem("displayname");
+         if(token && uname){
+            $('div#navLogin').css('display','none');
+            $('div#currentUserSection').css('display','block');
+            $('#currentUser').html(uname);
+         }else{
+            $('div#navLogin').css('display','block');
+            $('div#currentUserSection').css('display','none');
+         }
+      </script>
+       <script type="text/javascript">
+        
+        $(document).ready(function(){
+            $('#orderSuccess').hide();
+            getCartItems('orders');
+        });
+    </script>
 
     </body>
 </html>
